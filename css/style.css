@@ -1,0 +1,579 @@
+/* common styles */
+.container {
+  width: 80%;
+  margin: auto;
+
+}
+
+.title {
+  width: 15%;
+  margin: auto;
+}
+
+.divheader {
+  text-align: center;
+  font-size: 25px;
+  color: rgb(98, 132, 227);
+}
+
+.line {
+  transition: 1s;
+  width: 6vw;
+  height: 0.4vh;
+  background-color: rgb(98, 132, 227);
+  margin: 2vh auto;
+}
+
+.title:hover .line {
+  width: 10vw;
+}
+
+/* general styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: capitalize;
+  
+}
+
+a {
+  text-decoration: none;
+  font-size: 17px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  font-family: sans-serif;
+}
+
+/* sections */
+/* header  */
+
+header {
+  width: 100%;
+}
+
+header .container {
+  display: flex;
+}
+
+.img {
+  width: 10%;
+
+}
+
+header .img img {
+  width: 100%;
+  height: 15vh;
+  margin-top: 15%;
+}
+
+nav {
+  width: 65%;
+}
+
+.header-linkes {
+
+  margin-top: 8vh;
+  margin-left: 2vw;
+}
+
+.header-linkes li {
+  display: inline-block;
+  margin-right: 0.1vw;
+  padding: 7px 15px;
+  position: relative;
+}
+
+.header-linkes li::after,
+li::before {
+  position: absolute;
+  content: "";
+
+}
+
+.header-linkes li::after {
+  left: 0;
+  top: 0;
+  width: 98%;
+  height: 94%;
+  transition: 0.3s;
+  border-top: 2px solid rgb(107, 105, 105);
+  border-bottom: 2px solid rgb(107, 105, 105);
+  transform: scaleX(0);
+}
+
+.header-linkes li::before {
+  left: 0;
+  bottom: 0;
+  width: 94%;
+  height: 100%;
+  transition: 0.1s;
+  transform: scaleY(0);
+  border-left: 2px solid rgb(107, 105, 105);
+  border-right: 2px solid rgb(107, 105, 105);
+
+}
+
+.header-linkes li:hover::after {
+  transform: scaleX(1);
+
+}
+
+.header-linkes li:hover::before {
+  transform: scaleY(1);
+
+}
+
+.li-table {
+  position: relative;
+}
+
+table {
+  padding-top: 10px;
+  border: 1px solid gray;
+  position: absolute;
+  top: 8vh;
+  visibility: hidden;
+  width: 30vw;
+  height: 25vh;
+  background-color: white;
+
+}
+
+.li-table:hover table {
+  visibility: visible;
+}
+
+th,
+td {
+  color: blueviolet;
+}
+
+th {
+  position: relative;
+}
+
+th:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 60px;
+  height: 1px;
+  border-bottom: 2px dotted rgb(113, 145, 180);
+
+}
+
+tr {
+  padding: 5px;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+.icons {
+  width: 25%;
+  padding: 7vh 0 0 3vw;
+
+}
+
+.icons i {
+  font-size: 30px;
+  margin-right: 0.5vw;
+  margin-top: 2vh;
+  color: rgb(109, 109, 190);
+}
+
+.zero {
+  width: 20px;
+  height: 26px;
+  padding: 4px 5px;
+  border-radius: 50%;
+  background-color: rgb(109, 109, 190);
+  color: aliceblue;
+  margin-left: -12px;
+}
+
+.bag {
+  font-size: 18px;
+  margin-left: 8px;
+}
+
+.home {
+  width: 100vw;
+  margin-top: 3vh;
+}
+
+.home .container {
+  justify-content: space-evenly;
+  background-color: #f4f5f7;
+  /* background-color:#f8f8f8; */
+  padding: 0 10%;
+  height: 70vh;
+  display: flex;
+}
+
+.photo,
+.text {
+  flex: 1;
+}
+
+.photo {
+  text-align: center;
+}
+
+.text {
+  padding: 15% 0;
+  font-size: 30px;
+  color: rgb(98, 132, 227);
+}
+
+.text button {
+  background-color: rgb(98, 132, 227);
+  padding: 10px 25px;
+  color: rgb(253, 250, 250);
+  border: 0;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.home .container .photo img {
+  width: 90%;
+  height: 80%;
+  margin: 5% 0;
+}
+
+.best {
+  width: 100vw;
+  margin-top: 8vh;
+
+}
+
+.best .container {
+  height: 100%;
+
+}
+
+
+.best .container .images {
+  padding-top: 7vh;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.best .container .images div {
+  width: 24%;
+  height: 100%;
+}
+
+.best .container .images div p {
+  color: rgb(140, 152, 229);
+  font-size: 20px;
+  margin: 2vh 0 1vh;
+}
+
+.best .container .images div span {
+  font-size: 18px;
+  word-spacing: 5px;
+  color: rgb(119, 119, 216);
+  margin-top: 1vh;
+
+}
+
+.best .container .images div span i {
+  font-size: 30px;
+  color: rgb(106, 139, 210);
+  visibility: hidden;
+}
+
+.best .container .images div:hover i {
+  visibility: visible;
+}
+
+.best .container .images div img {
+  width: 100%;
+  height: 80%;
+
+}
+
+.bestcont {
+  width: 100%;
+  height: 50vh;
+  margin: 15vh 0 7vh;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.bestcont .profile {
+
+  width: 48%;
+  height: 100%;
+  background-color: rgb(245, 245, 249);
+  padding: 2vh 2vw;
+  line-height: 27px;
+  overflow: auto;
+
+}
+
+.bestcont .profile .header-best {
+  font-size: 25px;
+  display: flex;
+  padding: 2vh 0;
+  width: 100%;
+  height: 25%;
+
+}
+
+.bestcont .profile .Marketing {
+  margin-left: 6vw;
+  margin-top: -6vh;
+  margin-bottom: 3vh;
+  font-style: italic;
+}
+
+.bestcont .profile .header-best i {
+  color: rgb(138, 138, 216);
+  font-size: 40px;
+  margin-right: 0.5vw;
+
+}
+
+.bestcont .profile .h-line {
+  display: flex;
+  width: 50%;
+  float: right;
+  margin-top: 5vh;
+
+}
+
+.bestcont .profile .h-line div {
+  width: 30%;
+  height: 2px;
+  background-color: blue;
+  margin-left: 2vw;
+}
+
+.bestcont .profile p {
+  color: rgb(159, 150, 150);
+}
+
+.bestcont .discount {
+  width: 24%;
+  background-image: url(../images/Sony\ WH-1000XM5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3vh 0 0 2vw;
+}
+
+.bestcont .bestdiscount {
+  background-image: url(../images/AppleWatchSeries-ezgif.com-effects.jpg);
+}
+
+.bestcont .discount:hover {
+  transform: scale(1.1, 1.1);
+
+}
+
+.bestcont .discount .cont p {
+  color: gray;
+  font-size: 22px;
+  margin-bottom: 1vh;
+}
+
+.animation {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  padding-top: 5vh;
+  border-bottom: 1px solid gray;
+
+
+}
+
+.animation .div1 {
+  flex: 1;
+  border-right: 1px solid gray;
+  text-align: center;
+  height: 80%;
+  line-height: 30px;
+  padding: 2vh 0;
+}
+
+.animation .div5 {
+  border-right: 0;
+}
+
+.animation .div1 p {
+  color: gray;
+}
+
+.anim {
+  position: relative;
+  width: 25%;
+  height: 45%;
+  overflow: hidden;
+  transition: 1s;
+  margin: 10px auto 0;
+
+}
+
+.anim img {
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  transition: 1s;
+  left: 0;
+  top: 0;
+}
+
+.animation .div1:hover .anim img {
+  top: -12vh;
+}
+
+.product {
+  width: 100vw;
+  height: 160vh;
+  margin: 10vh 0;
+}
+
+.perant .container {
+  height: 100%;
+}
+
+.product h2 {
+  font-size: 25px;
+}
+
+.product ul {
+  text-align: center;
+  margin-top: 5vh;
+
+}
+
+.product ul li {
+  display: inline-block;
+  margin-right: 3vw;
+  color: gray;
+  font-size: 18px;
+  font-family: sans-serif;
+  margin-bottom: 5vh;
+}
+
+.perant {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  margin-top: 8vh;
+}
+
+.perant .div1 {
+  flex: 0.9;
+  height: 100%;
+
+}
+
+.perant .div2 {
+  margin: 0 20px;
+}
+
+.perant .div1 .product-img {
+  width: 100%;
+  height: 80%;
+  position: relative;
+}
+
+.perant .div1 .img {
+  width: 100%;
+  height: 100%;
+}
+
+.perant .div1 .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.perant .div1 .cont {
+  padding-top: 2vh;
+  line-height: 25px;
+  width: 100%;
+  height: 20%;
+}
+
+.perant .div1 .cont h4 ,.perant .div1 .cont p{
+  font-size: 20px;
+  margin: 1vh 0;
+}
+
+.perant .div1 .cont i {
+  margin-right: 0.5vw;
+  color: yellow;
+}
+
+.perant .div1 .cont i.fa-regular {
+  color: black;
+}
+
+.perant .div1 .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  transform: scaleX(0);
+  transition: 0.2s;
+}
+
+.perant .div1 .product-img .img:hover {
+  opacity: 0.2;
+}
+
+.perant .div1 .product-img:hover .overlay {
+  visibility: visible;
+  transform: scaleX(1);
+
+}
+
+.perant .div1 .overlay img {
+  width: 100%;
+  height: 100%;
+}
+
+.perant .div1 .overlay ul {
+  position: absolute;
+  width: 70%;
+  height: 10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.perant .div1 .overlay ul li {
+  display: inline-block;
+  margin-right: 2px;
+  background-color: rgb(150, 150, 218);
+  width: 40px;
+  height: 40px;
+padding: 5px 0;
+}
+
+.perant .div1 .overlay ul li i {
+  font-size: 30px;
+  color:white;
+
+}
